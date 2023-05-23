@@ -11,7 +11,7 @@ class UserRouter {
     final router = Router()
       ..get("/display_profile", displayProfileHandler)
       ..put("/edit_profile", editProfileHandler)
-      ..get('/display_user', displayUserHandler)
+      ..get('/display_user/<id>', displayUserHandler)
       ..mount("/contact", ContactRouter().handler);
 
     final pipline =
