@@ -11,15 +11,16 @@ getContactHandler(Request req) async {
     final supabase = SupabaseEnv().supabase;
 
 //-------------- get id from table user by use id auth
-    final result =
-        await supabase.from("users").select("id").eq("id_auth", jwt.payload["sub"]);
+    final result = await supabase
+        .from("users")
+        .select("id")
+        .eq("id_auth", jwt.payload["sub"]);
 
 //-------------- get contact by the id
     final resultContact = await supabase
         .from("contact")
         .select("platform,value")
         .eq("id_user", result[0]["id"]);
-
 
     return Success().responseMessage(
       message: "Contact information has been obtained ",

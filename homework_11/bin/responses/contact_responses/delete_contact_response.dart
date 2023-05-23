@@ -21,6 +21,7 @@ deleteContactHandler(Request req, String id) async {
     final contactInfo =
         await supabase.from("contact").select().eq("id_user", result[0]["id"]);
 
+
 //-------------- delete contact by id 
     await supabase
         .from("contact")

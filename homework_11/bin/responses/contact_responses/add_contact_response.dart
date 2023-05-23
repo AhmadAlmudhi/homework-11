@@ -27,8 +27,8 @@ addContactHandler(Request req) async {
 
     return Success().responseMessage(
       message: "Contact information has been added ! ${result[0]["id"]}",
-      data: body,
-    );
+      data: body, );
+      
   } catch (error) {
     return BadRequest().responseMessage(
       message: "Oops! wrong! Contact information has not been added",
