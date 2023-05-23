@@ -9,7 +9,7 @@ displayUserHandler(Request _, String id) async{
   final supabase = SupabaseEnv().supabase;
   
   final user = (await supabase
-      .from("users")
+      .from("profiles")
       .select()
       .eq("id", int.parse(id)))[0];
   final contact =
