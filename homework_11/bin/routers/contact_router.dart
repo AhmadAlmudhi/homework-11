@@ -8,7 +8,7 @@ class ContactRouter {
     final router = Router()
       ..post("/add", addContactHandler)
       ..get("/get", getContactHandler)
-      ..delete('/delete', deleteContactHandler);
+      ..delete('/delete/<id>', deleteContactHandler);
 
     return router;
   }

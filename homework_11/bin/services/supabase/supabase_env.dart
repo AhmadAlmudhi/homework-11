@@ -1,11 +1,11 @@
 import 'package:supabase/supabase.dart';
 
 class SupabaseEnv {
-  final _url = "https://vurdjrvrryxroweyouqt.supabase.co";
+  final _url = "https://abztaxrlmeshodancbpd.supabase.co";
   final _key =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ1cmRqcnZycnl4cm93ZXlvdXF0Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY4NDIzMDY0MiwiZXhwIjoxOTk5ODA2NjQyfQ.ZUOe6mdifZKciLPMSdSC5FHxbT70spld4gbX2cCDGbI";
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFienRheHJsbWVzaG9kYW5jYnBkIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY4NDIzMDcyOSwiZXhwIjoxOTk5ODA2NzI5fQ.ELHbLxCmiwGEpT-ezz-Shi3oomSeIeneTiobLzFjNnY";
   final _jwt =
-      'bvEk152DIHg7yQd5a35frDw+jGM5xioKuXe8s1ah98+ducarE+35veK0adPdZBnH2GqCGHhg/R7RDYjIP2KjHQ==';
+      'mX6BruxRJfaD2i6ubkbFRMoE3rqpOOZ0ZkHSNljjBhyaU1GjH7pvNghg4FcjR3MpJp6ZixtGC0QLrLxMP2uGMQ==';
 
   get jwt {
     return _jwt;
