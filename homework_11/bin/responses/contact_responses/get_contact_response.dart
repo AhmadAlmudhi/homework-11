@@ -1,6 +1,5 @@
 import 'package:dart_jsonwebtoken/dart_jsonwebtoken.dart';
 import 'package:shelf/shelf.dart';
-
 import '../../response_messages/bad_request.dart';
 import '../../response_messages/success.dart';
 import '../../services/supabase/supabase_env.dart';
@@ -12,7 +11,7 @@ getContactHandler(Request req) async {
 
 //-------------- get id from table user by use id auth
     final result = await supabase
-        .from("users")
+        .from("profiles")
         .select("id")
         .eq("id_auth", jwt.payload["sub"]);
 

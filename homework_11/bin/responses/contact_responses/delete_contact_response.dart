@@ -12,24 +12,22 @@ deleteContactHandler(Request req, String id) async {
 
 //-------------- get id from table user by  id auth
     final result = await supabase
-        .from("users")
+        .from("profiles")
         .select("id")
         .eq("id_auth", jwt.payload["sub"]);
 
-//-------------- get all from table contact by  id 
-    final contactInfo =
-        await supabase.from("contact").select().eq("id_user", result[0]["id"]);
+    final fromContact = supabase.from("contact");
 
-//-------------- delete contact by id 
-    await supabase
-        .from("contact")
+//-------------- delete contact by id
+    final deltedContact = await fromContact
         .delete()
         .eq("id_user", result[0]["id"])
-        .eq("id", int.parse(id));
+        .eq("id", int.parse(id))
+        .select("platform, value");
 
     return Success().responseMessage(
       message: "Contact information has been removed ! ",
-      data: {"contact": contactInfo},
+      data: {"contact": deltedContact},
     );
   } catch (error) {
     return BadRequest().responseMessage(
@@ -37,4 +35,3 @@ deleteContactHandler(Request req, String id) async {
     );
   }
 }
-
